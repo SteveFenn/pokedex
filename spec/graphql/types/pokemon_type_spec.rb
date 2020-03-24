@@ -16,6 +16,9 @@ RSpec.describe Types::PokemonType, type: :graphql do
             defence
             attack
             hp
+            types {
+              name
+            }
           }
         }
       GRAPHQL
