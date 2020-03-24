@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_115242) do
+ActiveRecord::Schema.define(version: 2020_03_24_142046) do
 
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "height", default: 0, null: false
+    t.integer "weight", default: 0, null: false
+    t.integer "speed", default: 0, null: false
+    t.integer "special_attack", default: 0, null: false
+    t.integer "special_defence", default: 0, null: false
+    t.integer "defence", default: 0, null: false
+    t.integer "attack", default: 0, null: false
+    t.integer "hp", default: 0, null: false
   end
 
 end
