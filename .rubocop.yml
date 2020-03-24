@@ -1,0 +1,134 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+    - '.git-hooks/**/*'
+    - 'app/views/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'lib/**/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'script/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
+Style/Documentation:
+  Enabled: false
+Layout/HashAlignment:
+  Enabled: false
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+Layout/ParameterAlignment:
+  Enabled: false
+Lint/AssignmentInCondition:
+  Enabled: false
+Lint/SuppressedException:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 25
+Metrics/ModuleLength:
+  Max: 150
+Metrics/ParameterLists:
+  Enabled: false
+Naming/AccessorMethodName:
+  Enabled: false
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+Naming/PredicateName:
+  Enabled: false
+Naming/MethodParameterName:
+  AllowedNames:
+    - '_'
+    - 'id'
+Performance/RedundantMerge:
+  Enabled: false
+Performance/FixedSize:
+  Enabled: false
+Rails/ApplicationRecord:
+  Exclude:
+    - 'db/migrate/*.rb'
+Rails/Output:
+  Exclude:
+    - 'db/migrate/*.rb'
+Rails/CreateTableWithTimestamps:
+  Enabled: true
+Rails/Date:
+  Enabled: false
+Rails/DynamicFindBy:
+  Enabled: true
+Rails/EnvironmentComparison:
+  Enabled: true
+Rails/EnumHash:
+  Enabled: true
+Rails/EnumUniqueness:
+  Enabled: true
+Rails/HasAndBelongsToMany:
+  Enabled: true
+Rails/Presence:
+  Enabled: true
+Rails/RedundantAllowNil:
+  Enabled: true
+Rails/RedundantReceiverInWithOptions:
+  Enabled: true
+Rails/RelativeDateConstant:
+  Enabled: true
+Rails/SaveBang:
+  Enabled: true
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'db/migrate/*.rb'
+Rails/TimeZone:
+  Enabled: false
+Rails/UnknownEnv:
+  Enabled: true
+Security/YAMLLoad:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/DateTime:
+  Enabled: false
+Style/FormatString:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/MethodMissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
+  Enabled: false
+Style/RaiseArgs:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/RescueModifier:
+  Enabled: false
+Style/SpecialGlobalVars:
+  Enabled: false
+Style/TrailingCommaInArguments:
+  Enabled: false
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true

@@ -1,0 +1,166 @@
+inherit_from: ../.rubocop.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
+AllCops:
+  DisabledByDefault: false
+
+Style/StringLiterals:
+  Include:
+    - '**/*.rb'
+
+Layout/TrailingEmptyLines:
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  Include:
+    - '**/*.rb'
+
+Metrics/BlockLength:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: true
+
+RSpec/DescribeMethod:
+  Enabled: true
+
+RSpec/DescribedClass:
+  Enabled: true
+
+RSpec/EmptyExampleGroup:
+  Enabled: true
+
+RSpec/EmptyLineAfterExampleGroup:
+  Enabled: true
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: true
+
+RSpec/EmptyLineAfterHook:
+  Enabled: true
+
+RSpec/EmptyLineAfterSubject:
+  Enabled: true
+
+# TODO: discuss and agree on the max example length
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/ExampleWording:
+  Enabled: true
+
+RSpec/ExpectChange:
+  Enabled: false
+
+RSpec/ExpectInHook:
+  Enabled: false
+
+RSpec/FilePath:
+  CustomTransform:
+    GraphQLController: graphql_controller
+    GraphQL: graphql
+
+RSpec/Focus:
+  Enabled: true
+
+RSpec/HookArgument:
+  Enabled: false
+
+RSpec/HooksBeforeExamples:
+  Enabled: true
+
+RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/ImplicitSubject:
+  Enabled: false
+
+RSpec/IteratedExpectation:
+  Enabled: true
+
+RSpec/LeadingSubject:
+  Enabled: true
+
+RSpec/LetSetup:
+  Enabled: true
+
+RSpec/MessageChain:
+  Enabled: false
+
+# TODO: this is interesting and possibly worth discussing
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleSubjects:
+  Enabled: true
+
+RSpec/NamedSubject:
+  Enabled: true
+
+RSpec/NestedGroups:
+  Enabled: true
+  Max: 3
+
+RSpec/NotToNot:
+  Enabled: false
+
+RSpec/OverwritingSetup:
+  Enabled: true
+
+RSpec/RepeatedDescription:
+  Enabled: true
+
+RSpec/RepeatedExample:
+  Enabled: true
+
+RSpec/ScatteredLet:
+  Enabled: true
+
+RSpec/ScatteredSetup:
+  Enabled: true
+
+RSpec/SharedContext:
+  Enabled: true
+
+RSpec/SharedExamples:
+  Enabled: false
+
+RSpec/SubjectStub:
+  Enabled: true
+
+RSpec/UnspecifiedException:
+  Enabled: true
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/VoidExpect:
+  Enabled: true
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
