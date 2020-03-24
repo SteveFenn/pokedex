@@ -8,6 +8,14 @@ RSpec.describe Types::PokemonType, type: :graphql do
           pokemon(id: $pokemonSlug){
             slug
             name
+            height
+            weight
+            speed
+            specialDefence
+            specialAttack
+            defence
+            attack
+            hp
           }
         }
       GRAPHQL
