@@ -13,7 +13,8 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 # To seed the pokemon database
 gem 'poke-api-v2'
-
+# This is a graphql API
+gem 'graphql'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
