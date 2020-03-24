@@ -23,7 +23,7 @@ Lint/AmbiguousBlockAssociation:
 Lint/UselessAssignment:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
   Include:
     - '**/*.rb'

@@ -1,13 +1,10 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
-
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: 'An example field added by the generator'
-    def test_field
-      'Hello World!'
+    field :pokemon, PokemonType, null: true, description: 'Stats on individual pokemon' do
+      argument :id, ID, required: true, as: :id_or_slug
+    end
+    def pokemon(id_or_slug:)
+      Pokemon.friendly_find_by(id_or_slug)
     end
   end
 end

@@ -68,6 +68,8 @@ GEM
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
     ffi (1.12.2)
+    friendly_id (5.3.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     graphql (1.10.5)
@@ -171,6 +173,8 @@ GEM
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
+    shoulda-matchers (4.3.0)
+      activesupport (>= 4.2.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -200,6 +204,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   factory_bot
+  friendly_id
   graphql
   hashie
   listen (>= 3.0.5, < 3.2)
@@ -211,6 +216,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
+  shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
