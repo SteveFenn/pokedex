@@ -15,6 +15,8 @@ gem 'puma', '~> 4.1'
 gem 'poke-api-v2'
 # This is a graphql API
 gem 'graphql'
+# For query helpers in rspec
+gem 'hashie'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
