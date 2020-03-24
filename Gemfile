@@ -9,10 +9,8 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.7'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# To seed the pokemon database
+gem 'poke-api-v2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
