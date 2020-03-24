@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_150613) do
+ActiveRecord::Schema.define(version: 2020_03_24_154932) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name", null: false
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 2020_03_24_150613) do
     t.integer "defence", default: 0, null: false
     t.integer "attack", default: 0, null: false
     t.integer "hp", default: 0, null: false
+  end
+
+  create_table "sprites", force: :cascade do |t|
+    t.integer "pokemon_id", null: false
+    t.integer "perspective", default: 0, null: false
+    t.string "url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pokemon_id"], name: "index_sprites_on_pokemon_id"
   end
 
 end

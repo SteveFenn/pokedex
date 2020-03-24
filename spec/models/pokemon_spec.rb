@@ -17,5 +17,6 @@ RSpec.describe Pokemon, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:genres).through(:pokemon_types) }
     it { is_expected.to have_many(:pokemon_types).dependent(:destroy) }
+    it { is_expected.to have_many(:sprites) }
   end
 end

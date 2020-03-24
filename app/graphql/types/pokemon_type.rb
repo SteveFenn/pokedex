@@ -11,5 +11,6 @@ module Types
     field :attack, Integer, null: false
     field :hp, Integer, null: false
     field :types, [GenreType], null: true
+    field :sprites, [SpriteType], null: true
   end
 end

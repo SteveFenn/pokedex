@@ -4,6 +4,7 @@ class Pokemon < ApplicationRecord
 
   has_many :pokemon_types, dependent: :destroy
   has_many :genres, through: :pokemon_types
+  has_many :sprites, dependent: :destroy
 
   validates :name, presence: true
   validates :slug, presence: true

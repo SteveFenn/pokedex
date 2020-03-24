@@ -4,7 +4,7 @@ def find_stat(pokemon, stat_name)
 end
 
 # Iterate over the first 150 pokemon
-(1..150).each do |id|
+(1..150).each do |id| # rubocop:disable Metrics/BlockLength
   data = PokeApi.get(pokemon: id)
   pokemon = Pokemon.create!(
     slug: data.name,
@@ -19,8 +19,22 @@ end
     hp: find_stat(data, 'hp')
   )
 
+  # Types
   data.types.each do |obj|
     genre = Genre.find_or_create_by!(slug: obj.type.name, name: obj.type.name.titleize)
     pokemon.genres << genre
   end
+
+  # Sprites
+  Sprite.create!(
+    pokemon: pokemon,
+    perspective: 'front',
+    url: data.sprites.front_default
+  )
+
+  Sprite.create!(
+    pokemon: pokemon,
+    perspective: 'back',
+    url: data.sprites.back_default
+  )
 end
