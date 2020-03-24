@@ -2,6 +2,9 @@ class Pokemon < ApplicationRecord
   extend FriendlyId
   friendly_id :name
 
+  has_many :pokemon_types, dependent: :destroy
+  has_many :genres, through: :pokemon_types
+
   validates :name, presence: true
   validates :slug, presence: true
   validates :height, presence: true
@@ -12,4 +15,6 @@ class Pokemon < ApplicationRecord
   validates :attack, presence: true
   validates :defence, presence: true
   validates :hp, presence: true
+
+  alias types genres
 end

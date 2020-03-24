@@ -6,7 +6,7 @@ end
 # Iterate over the first 150 pokemon
 (1..150).each do |id|
   data = PokeApi.get(pokemon: id)
-  Pokemon.create!(
+  pokemon = Pokemon.create!(
     slug: data.name,
     name: data.name.titleize,
     height: data.height,
@@ -18,4 +18,9 @@ end
     attack: find_stat(data, 'attack'),
     hp: find_stat(data, 'hp')
   )
+
+  data.types.each do |obj|
+    genre = Genre.find_or_create_by!(slug: obj.type.name, name: obj.type.name.titleize)
+    pokemon.genres << genre
+  end
 end

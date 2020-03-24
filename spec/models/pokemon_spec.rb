@@ -13,4 +13,9 @@ RSpec.describe Pokemon, type: :model do
     it { is_expected.to validate_presence_of :attack }
     it { is_expected.to validate_presence_of :hp }
   end
+
+  describe 'associations' do
+    it { is_expected.to have_many(:genres).through(:pokemon_types) }
+    it { is_expected.to have_many(:pokemon_types).dependent(:destroy) }
+  end
 end

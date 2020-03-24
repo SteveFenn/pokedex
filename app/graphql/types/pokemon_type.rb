@@ -10,5 +10,6 @@ module Types
     field :defence, Integer, null: false
     field :attack, Integer, null: false
     field :hp, Integer, null: false
+    field :types, [GenreType], null: true
   end
 end
